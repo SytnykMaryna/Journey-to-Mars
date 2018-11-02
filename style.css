@@ -1,0 +1,726 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+
+.header-main {
+	background-image: url('pictures/mara1.jpg');
+	background-attachment: fixed;
+	min-height: 70vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	text-align: center;
+
+}
+
+.header-text h1 {
+	padding: 0.5rem;
+	color: #191970;
+	font-size: 4em;
+	font-weight: bold;
+	font-family: "Courier New";
+}
+
+.header-text p {
+	color: #fff;
+	font-size: 1rem;
+	font-family: "Courier New";
+
+}
+
+.nav-main ul li {
+	display: inline-block;
+	height: 3rem;
+	line-height: 3rem;
+	cursor: pointer ;
+	margin: 5rem 2rem ;
+}
+
+.nav-main ul li a{
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fff;
+	padding: 0 3rem;
+	border: 2px solid #ccc;
+}
+
+.nav-main ul li a:hover {
+	color: red;
+	border: none;
+	border-bottom: 2px solid #191970;
+}
+
+main {
+	min-height:calc(100vh - 150px);
+}
+
+.news-section,
+.about-section,
+.apply-section,
+.nav-footer {
+	margin:0 auto;
+	position:relative;
+	width:85%;
+}
+
+.right-mission-block,
+.center-mission-block,
+.left-mission-block {
+	margin: 1rem;
+	border-bottom: 2px solid #ccc;
+}
+
+.right-mission-block p:nth-of-type(1),
+.center-mission-block p:nth-of-type(1),
+.left-mission-block p:nth-of-type(1){
+	display: inline-block;
+	font-weight: bold;
+	font-size: 2em;
+	font-family: "Courier New";
+	color: #0b243a;
+	margin: 1em 2em;
+}
+
+.right-mission-block img {
+	float: left;
+}
+
+.center-mission-block img {
+	float: right;
+}
+
+.left-mission-block img {
+	float: left;
+}
+
+
+.right-mission-block::after,
+.center-mission-block::after,
+.left-mission-block::after {
+	content : "";
+  	visibility : hidden;
+  	display : block;
+  	height : 0;
+  	clear : both;
+}
+
+img[alt="Space1"],
+img[alt="Space2"],
+img[alt="Space3"] {
+	margin: 1em;
+}
+
+.right-mission-block p,
+.center-mission-block p,
+.left-mission-block p,
+.about-section p {
+	font-size: 1.3em;
+	line-height: 1.7rem;
+}
+
+.about-article p {
+	padding: 0 1rem;
+}
+.about-header h2,
+.apply-section h2  {
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #0b243a;
+	font-family: "Courier New";
+	margin: 1rem 0;
+}
+
+.about-header h2:hover,
+.apply-section h2:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  color: red;
+}
+
+.about-article {
+	padding-bottom: 1rem;
+	border-bottom: 2px solid #ccc;
+}
+
+
+img[alt="Mars2"] {
+	display: none;
+}
+
+
+.about-article h3 {
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	color: #0b243a;
+	font-family: "Courier New";
+	margin: 1em;
+}
+
+.apply-form p {
+	text-transform: uppercase;
+	color: #0b243a;
+	font-size: 1.3em;
+	margin: 8px;
+	font-family: "Courier New";
+	font-weight: bold;
+}
+
+form {
+	text-align: center;
+}
+
+input {
+	width: 15rem;
+	height: 2rem;
+	border: 1px solid #0b243a;
+}
+
+input[title="First Name"] {
+	margin-left: 1rem;
+}
+
+input[title="Last Name"] {
+	margin-left: 1.8rem;
+}
+
+input[title="E-mail"] {
+	margin-left: 4.2rem;
+}
+
+input[title="Phone"] {
+	margin-left: 4.9rem;
+}
+
+input[title="Country"] {
+	margin-left: 3.4rem;
+}
+
+input[title="State"] {
+	margin-left:4.8rem ;
+}
+
+input[title="City"] {
+	margin-left:5.6rem ;
+}
+
+button {
+	width: 11rem;
+	height: 3rem;
+	border: 2px solid #0b243a;
+	font-size: 1.3em;
+	color: #0b243a;
+	margin: 2rem;
+}
+
+button:hover {
+  	border: 2px solid #112EF2;
+  	border-radius: 5px;
+	color: #112EF2;
+}
+
+footer {
+	background: url('pictures/journey2mars_bn.png') no-repeat;
+	background-size: cover;
+	height: 150px;
+}
+
+.nav-footer {
+	-moz-column-count: 4;
+    -moz-column-width: 180px;
+    -moz-column-gap: 0.5rem;
+    -webkit-column-count: 4;
+    -webkit-column-width: 180px;
+    -webkit-column-gap: 0.5rem;
+    column-count: 4;
+    column-width: 180px;
+    column-gap: 0.5rem;
+}
+
+.nav-footer h2 {
+	padding: 1rem 0;
+	color: #fff;
+	font-size: 1.1em;
+	font-family: "Courier New";
+}
+
+.nav-footer li {
+	margin: 0.5rem 0;
+}
+
+.nav-footer a {
+	color: #112EF2;
+	font-size: 1.1rem;
+	cursor: pointer ;
+}
+
+/* @media only screen and (max-device-width: 1366px) {
+    .header-main {
+        background-attachment: scroll;
+    }
+} */
+/****************************************************************              PC              ***************************************************/
+@media (min-width: 1143px) and (max-width: 1217px) {
+
+	.header-main {
+		min-height: 80vh;
+	}
+
+	.news-section,
+	.about-section,
+	.apply-section {
+		width:100%;
+		padding:0;
+	}
+
+	.nav-footer {
+		width:80%;
+		padding:0;
+	}
+
+	.header-text h1 {
+		font-size: 2.5rem;
+	}
+
+	main {
+		height:calc(100vh-200px) ;
+	}
+
+	.about-header h2,
+	.apply-section h2,
+	.nav-footer {
+		font-size: 2em;
+	}
+
+	.about-article h3 {
+		font-size: 1.5em;
+	}
+
+	.right-mission-block p,
+	.center-mission-block p,
+	.left-mission-block p,
+	.about-section p{
+		font-size: 1.3em;
+	}
+
+	footer {
+		height: 200px;
+	}
+
+	.nav-footer h2 {
+		font-size: 1rem;
+		padding: 0.5rem 0;
+	}
+
+	.nav-footer li {
+		margin: 0.2rem 0;
+
+	}
+
+	.nav-footer a {
+		font-size: 1rem;
+	}
+
+	.nav-section1 ul,
+	.nav-section2 ul,
+	.nav-section3 ul,
+	.nav-section4 ul {
+		padding-bottom: 1rem;
+	}
+}
+
+
+/****************************************************************              TABLET              ***********************************************/
+@media (min-width: 978px) and (max-width: 1143px) {
+	.header-main {
+		min-height: 70vh;
+	}
+
+	.right-mission-block img,
+	.center-mission-block img,
+	.left-mission-block img {
+		width: 350px;
+		height: 300px;
+	}
+
+	.nav-footer {
+		width:70%;
+		padding:0;
+	}
+
+	.nav-footer h2 {
+		font-size: 1rem;
+		padding: 0.7rem 0;
+	}
+
+	.nav-footer {
+		column-count: 3;
+	}
+
+	.nav-section4 {
+		display: none ;
+	}
+}
+
+
+
+/****************************************************************              TABLET              ***********************************************/
+ @media (min-width: 768px) and (max-width: 977px) {
+	.header-main {
+		min-height: 70vh;
+	}
+
+	.header-text h1 {
+		font-size: 2.5rem;
+	}
+
+	.nav-main {
+		margin-top: 5rem;
+	}
+
+	.nav-main ul li {
+		display: inline-block;
+		height: 3rem;
+		line-height: 3rem;
+		cursor: pointer ;
+		margin: 2rem;
+	}
+
+	.nav-main ul li a{
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #fff;
+		padding: 0.7rem 2rem;
+	}
+
+	main {
+		height:calc(100vh-200px) ;
+	}
+
+	.news-section,
+	.about-section,
+	.apply-section,
+	.nav-footer {
+		margin:0 auto;
+		position:relative;
+		width:95%;
+	}
+
+	.right-mission-block img,
+	.center-mission-block img,
+	.left-mission-block img {
+		width: 300px;
+		height: 250px;
+	}
+
+	.about-header h2,
+	.apply-section h2,
+	.nav-footer {
+		font-size: 1.7em;
+	}
+
+	.about-article h3 {
+		font-size: 1.3em;
+	}
+
+	.right-mission-block p,
+	.center-mission-block p,
+	.left-mission-block p,
+	.about-section p {
+		font-size: 1em;
+	}
+
+	footer {
+		height: 200px;
+	}
+
+	.nav-footer {
+		width:75%;
+	}
+
+	.nav-footer {
+		column-count: 3;
+	}
+
+	.nav-section4 {
+		display: none ;
+	}
+
+	.nav-footer h2 {
+		padding: 0.8rem 0;
+		font-size: 1.1rem;
+	}
+
+	.nav-footer li {
+		margin: 0.3rem 0;
+	}
+
+	.nav-footer a {
+		font-size: 0.9rem;
+	}
+
+}
+
+
+
+
+/****************************************************************              TABLET              ***********************************************/
+@media (min-width: 490px) and (max-width: 767px) {
+	.header-text h1 {
+		font-size: 2rem;
+	}
+
+	.nav-main {
+		margin-top: 5rem;
+	}
+
+	.nav-main ul li {
+		display: inline-block;
+		height: 3rem;
+		line-height: 3rem;
+		cursor: pointer ;
+		margin: 1rem;
+	}
+
+	.nav-main ul li a{
+		font-size: 1.3rem;
+		font-weight: bold;
+		color: #fff;
+		padding: 0.7rem 1.5rem;
+	}
+
+	main {
+		height:calc(100vh-150px) ;
+	}
+
+	.right-mission-block img,
+	.center-mission-block img,
+	.left-mission-block img {
+		width: 300px;
+		height: 250px;
+	}
+
+	footer {
+		height: 150px;
+	}
+
+	.nav-footer {
+		column-count: 2;
+	}
+
+	.nav-section3,
+	.nav-section4 {
+		display: none ;
+	}
+}
+
+/****************************************************************              MOBILE              ***********************************************/
+ @media (min-width: 320px) and (max-width:489px) {
+
+	.header-main {
+		min-height: 53vh;
+	}
+
+	.header-text p {
+		display: block;
+		padding: 0.2rem;
+	}
+
+	.header-text h1 {
+		font-size: 2rem;
+	}
+
+
+	.nav-main {
+		background-color: #ccc;
+		margin-top: 17rem;
+	}
+
+	.nav-main ul li {
+		display: inline-block;
+		height: 2rem;
+		line-height: 2rem;
+		cursor: pointer ;
+		margin: 0;
+	}
+
+	.nav-main ul li a{
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #fff;
+		padding: 1rem;
+		border: none;
+	}
+
+	.nav-main ul li a:hover {
+		color: red;
+		border: none;
+		border-bottom: none;
+	}
+
+	.news-section,
+	.about-section,
+	.apply-section {
+		width:100%;
+		padding:0;
+	}
+
+	.nav-footer {
+		width:75%;
+		padding:0;
+	}
+
+
+	main {
+		height: calc(100vh-300px);
+	}
+
+	.about-header h2,
+	.apply-section h2,
+	.nav-footer  h2 {
+		font-size: 1.5em;
+	}
+
+	.about-article h3 {
+		font-size: 1.3em;
+	}
+
+	.right-mission-block p,
+	.center-mission-block p,
+	.left-mission-block p,
+	.about-section p{
+		font-size: 1em;
+	}
+
+	.right-mission-block p:nth-of-type(1),
+	.center-mission-block p:nth-of-type(1),
+	.left-mission-block p:nth-of-type(1){
+		display:block;
+		font-weight: bold;
+		font-size: 1.3em;
+		font-family: "Courier New";
+		color: #0b243a;
+	}
+
+	.right-mission-block img,
+	.center-mission-block img,
+	.left-mission-block img {
+		width: 250px;
+		height: 200px;
+	}
+
+	.apply-form p {
+		font-size: 1em;
+	}
+
+	input {
+		width: 10rem;
+		height: 2rem;
+		border: 1px solid #0b243a;
+	}
+
+	input[title="First Name"] {
+	margin-left: 1rem;
+	}
+
+	input[title="Last Name"] {
+		margin-left: 1.6rem;
+	}
+
+	input[title="E-mail"] {
+		margin-left: 3.4rem;
+	}
+
+	input[title="Phone"] {
+		margin-left: 3.9rem;
+	}
+
+	input[title="Country"] {
+		margin-left: 2.7rem;
+	}
+
+	input[title="State"] {
+		margin-left: 3.9rem;
+	}
+
+	input[title="City"] {
+		margin-left: 4.5rem;
+	}
+
+	footer {
+		height: 300px;
+	}
+
+	.nav-footer {
+		column-count: 2;
+	}
+
+	.nav-section3,
+	.nav-section4 {
+		display: none ;
+	}
+
+	.nav-footer h2 {
+		padding: 0.8rem 0;
+		font-size: 1.1rem;
+	}
+
+	.nav-footer li {
+		margin: 0.3rem 0;
+	}
+
+	.nav-footer a {
+		font-size: 1rem;
+	}
+}
